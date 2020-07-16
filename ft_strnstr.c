@@ -2,29 +2,7 @@
 #include <string.h>
 #include <xlocale.h>
 
-int	main()
-{
-	printf("%s", strnstr("asd asd asd", "asd asd assd", 14));
-}
-
-char *strnstr(char *pajar, char *aguja, int len)
-{
-	int	i;
-	int j;
-
-	i = 0;
-	j = 0;
-	while (pajar[i] != '0')
-	{
-		if (pajar[i] == aguja[j])
-		{
-
-		}
-		i++;
-	}
-}
-
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strnstr(char *str, char *to_find, int len)
 {
 	int i;
 	int j;
@@ -35,7 +13,7 @@ char	*ft_strstr(char *str, char *to_find)
 	while (str[i])
 	{
 		j = 0;
-		while (to_find[j] && str[i + j] == to_find[j])
+		while (to_find[j] && str[i + j] == to_find[j] && (i + j) < len)
 		{
 			if (to_find[j + 1] == '\0')
 				return (&str[i]);
@@ -44,4 +22,11 @@ char	*ft_strstr(char *str, char *to_find)
 		i++;
 	}
 	return (0);
+}
+
+int	main()
+{
+	printf("%s", strnstr("asd 2asd1 asd", "asd 2", 4));
+	printf("\n");
+	printf("%s", ft_strnstr("asd 2asd1 asd", "asd 2", 4));
 }

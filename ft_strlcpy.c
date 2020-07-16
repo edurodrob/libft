@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include <string.h>
 
 char *ft_strlcpy(char *dst, char *src, int dstsize)
 {
@@ -15,8 +16,12 @@ char *ft_strlcpy(char *dst, char *src, int dstsize)
 	return(dst);
 }
 
-int main ()
+int main()
 {
-	char	dst[]="12345";
-	printf("%s", ft_strlcpy(dst, "Pruuuuuuuebaa", 5));
+    char dst[]="asdasd";
+	char dst2[]="asdasd";
+
+    printf("%u\n", ft_strlcpy(dst, "0123456789", 6));
+    printf("%lu", strlcpy(dst2, "0123456789", 6));
 }
+

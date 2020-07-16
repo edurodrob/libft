@@ -1,25 +1,21 @@
 #include<stdio.h>
 
-char	*ft_strrchr(char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
-	int		j;
-	char	a;
 
 	i = 0;
-	j = 0;
-	a = c + '0';
 	while (s[i] != '\0')
 		i++;
-	while (s[i] != a)
+	while (s[i] != c && i >= 0)
 		i--;
-	if (s[i] == s[j] && s[i] != a)
-		return ('\0');
+	if (s[i] == s[0] && s[i] != c)
+		return (NULL);
 	else
-		return (&s[i]);
+		return ((char *)s + i);
 }
 
 int	main()
 {
-	printf("%s", ft_strrchr("4adfd423464dsf56", 8));
+	printf("%s", ft_strrchr("asdasd4asdasd4asdasd", 'a'));
 }
