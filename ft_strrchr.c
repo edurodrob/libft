@@ -1,4 +1,17 @@
-#include<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erodrigu <erodrigu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/26 19:28:21 by erodrigu          #+#    #+#             */
+/*   Updated: 2020/10/26 19:28:32 by erodrigu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -15,7 +28,7 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s + i);
 }
 
-int	main()
+int		main()
 {
 	printf("%s", ft_strrchr("asdasd4asdasd4asdasd", 'a'));
 }

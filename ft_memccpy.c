@@ -1,45 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erodrigu <erodrigu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/26 19:28:09 by erodrigu          #+#    #+#             */
-/*   Updated: 2020/10/26 20:24:14 by erodrigu         ###   ########.fr       */
+/*   Created: 2020/10/26 19:13:11 by erodrigu          #+#    #+#             */
+/*   Updated: 2020/10/26 19:15:28 by erodrigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-#include <xlocale.h>
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned int i;
-	unsigned int j;
+	size_t			i;
+	unsigned char	*dest;
+	unsigned char	*source;
 
+	dest = (unsigned char *)dst;
+	source = (unsigned char *)src;
 	i = 0;
-	if (to_find[i] == '\0')
-		return ((char *)str);
-	while (str[i] && i < len)
+
+	while (i < n)
 	{
-		j = 0;
-		while (to_find[j] && str[i + j] == to_find[j] && (i + j) < len)
-		{
-			if (to_find[j + 1] == '\0')
-				return ((char *)&str[i]);
-			j++;
-		}
+		dest[i] = source[i];
+		if (source[i] == (unsigned char)c)
+			return (dst + i + 1);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 int		main()
 {
-	printf("%s", strnstr("asd 2asd1 adsd", " ", 4));
-	printf("\n");
-	printf("%s", ft_strnstr("asd 2asd1 adsd", " ", 4));
+	char	dst[50]="sobreescribir";
+	char	src[50]="bcdeafg";
+
+	printf("%s", ft_memccpy(dst, src, 'g', 7));
+
+	char	dst2[50]="sobreescribir";
+	char	src2[50]="bcdeafg";
+
+	printf("\n%s", memccpy(dst2, src2, 'g', 7));
 }

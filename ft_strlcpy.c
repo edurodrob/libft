@@ -1,7 +1,20 @@
-#include<stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erodrigu <erodrigu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/26 19:26:55 by erodrigu          #+#    #+#             */
+/*   Updated: 2020/10/26 20:55:20 by erodrigu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strlcpy(char *dst, char *src, int dstsize)
+#include <stdio.h>
+#include <string.h>
+#include "libft.h"
+// FATAL CORREGIR ENTERA 
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	int	i;
 
@@ -13,15 +26,14 @@ char *ft_strlcpy(char *dst, char *src, int dstsize)
 	}
 	dst[i] = '\0';
 
-	return(dst);
+	return (dst);
 }
 
-int main()
+int		main()
 {
     char dst[]="asdasd";
 	char dst2[]="asdasd";
 
-    printf("%u\n", ft_strlcpy(dst, "0123456789", 6));
+    printf("%s\n", ft_strlcpy(dst, "0123456789", 6));
     printf("%lu", strlcpy(dst2, "0123456789", 6));
 }
-

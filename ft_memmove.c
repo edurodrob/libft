@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erodrigu <erodrigu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/26 19:18:55 by erodrigu          #+#    #+#             */
+/*   Updated: 2020/10/26 19:19:13 by erodrigu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <string.h>
-// #include "libft.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -17,11 +29,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			dest[len] = source[len];
 	}
 	else if (dest < source)
-		ft_memcpy(dst, src, len);
+		memcpy(dst, src, len);
 	return (dst);
 }
 
-int	main()
+int		main()
 {
 	char	dst[50]="abcdef";
 
