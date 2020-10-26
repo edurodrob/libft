@@ -17,7 +17,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			dest[len] = source[len];
 	}
 	else if (dest < source)
-		memcpy(dst, src, len);
+		ft_memcpy(dst, src, len);
 	return (dst);
 }
 
