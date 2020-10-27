@@ -27,14 +27,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-int		main(void)
-{
-	char	str[50] = "abcdef";
-	char	str2[50] = "abcdef";
-
-	ft_bzero(str, (0));
-	printf("%s", str);
-	bzero(str2, (0));
-	printf("\n%s", str2);
-}

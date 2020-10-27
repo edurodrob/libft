@@ -20,8 +20,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
-int	main()
-{
-	printf("%d", ft_isascii(14));
-}

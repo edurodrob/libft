@@ -33,16 +33,3 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	}
 	return (NULL);
 }
-
-int		main()
-{
-	char	dst[50]="sobreescribir";
-	char	src[50]="bcdeafg";
-
-	printf("%p", ft_memccpy(dst, src, 'g', 7));
-
-	char	dst2[50]="sobreescribir";
-	char	src2[50]="bcdeafg";
-
-	printf("\n%p", memccpy(dst2, src2, 'g', 7));
-}

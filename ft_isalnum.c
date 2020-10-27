@@ -21,8 +21,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-int	main()
-{
-	printf("%d", ft_isalnum(72));
-}

@@ -32,11 +32,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[i + j] = '\0';
 	return (i + strlen(src));
 }
-
-int		main()
-{
-	char	dst[20]="12345678";
-	printf("%zu", ft_strlcat(dst, "abcdef", 12));
-	char	dst2[20]="12345678";
-	printf("\n%zu", strlcat(dst2, "abcdef", 12));
-}

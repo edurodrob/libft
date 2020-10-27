@@ -35,10 +35,3 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	}
 	return (0);
 }
-
-int		main()
-{
-	printf("%s", strnstr("asd 2asd1 adsd", " ", 4));
-	printf("\n");
-	printf("%s", ft_strnstr("asd 2asd1 adsd", " ", 4));
-}

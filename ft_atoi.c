@@ -38,8 +38,3 @@ int	ft_atoi(const char *str)
 	}
 	return (s * c);
 }
-
-int	main(void)
-{
-	printf("%d", ft_atoi(" --++++++++++++---+--+12399asd88984ab567"));
-}

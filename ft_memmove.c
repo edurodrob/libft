@@ -30,14 +30,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		memcpy(dst, src, len);
 	return (dst);
 }
-
-int		main()
-{
-	char	dst[50]="abcdef";
-
-	printf("%p", ft_memmove(dst+3, dst+1, 3));
-
-	char	dst2[50]="abcdef";
-
-	printf("\n%p", memmove(dst2+3, dst2+1, 3));
-}

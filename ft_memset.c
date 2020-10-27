@@ -27,10 +27,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (str);
 }
-
-int		main(void)
-{
-	char	str[50] = "abcdef";
-
-	printf("%p", ft_memset(str, '@', 6));
-}

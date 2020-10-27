@@ -27,8 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	else
 		return ((char *)s + i);
 }
-
-int		main()
-{
-	printf("%s", ft_strrchr("asdasd4asdasd4asdasd", 'a'));
-}
