@@ -6,13 +6,13 @@
 /*   By: erodrigu <erodrigu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 19:20:20 by erodrigu          #+#    #+#             */
-/*   Updated: 2020/10/26 20:13:28 by erodrigu         ###   ########.fr       */
+/*   Updated: 2020/10/27 21:58:07 by sagarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
 		return ;

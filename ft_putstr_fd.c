@@ -6,13 +6,13 @@
 /*   By: erodrigu <erodrigu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 19:22:31 by erodrigu          #+#    #+#             */
-/*   Updated: 2020/10/26 20:31:34 by erodrigu         ###   ########.fr       */
+/*   Updated: 2020/10/27 21:57:31 by sagarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int i;
 

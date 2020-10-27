@@ -6,7 +6,7 @@
 /*   By: erodrigu <erodrigu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 19:28:38 by erodrigu          #+#    #+#             */
-/*   Updated: 2020/10/26 20:51:13 by erodrigu         ###   ########.fr       */
+/*   Updated: 2020/10/27 21:56:57 by sagarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	newstr = (char *)malloc(sizeof(char) * (end - start + 1) + 1);
 	if (newstr == NULL)
 		return (NULL);
-	ft_strncpy(newstr, (s1 + start), (end - start + 1));
+	ft_strlcpy(newstr, (s1 + start), (end - start + 1));
 	return (newstr);
 }
