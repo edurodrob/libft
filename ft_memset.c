@@ -32,5 +32,5 @@ int		main(void)
 {
 	char	str[50] = "abcdef";
 
-	printf("%s", ft_memset(str, '@', 6));
+	printf("%p", ft_memset(str, '@', 6));
 }

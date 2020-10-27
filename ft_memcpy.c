@@ -31,14 +31,3 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	}
 	return (dst);
 }
-
-int		main()
-{
-	char	dst[50]="I am going from Dheli to Ghorakpur";
-
-	printf("%s", ft_memcpy(dst+11, dst+5, 29));
-
-	char	dst2[50]="I am going from Dheli to Ghorakpur";
-
-	printf("\n%s", memcpy(dst2+11, dst2+5, 29));
-}

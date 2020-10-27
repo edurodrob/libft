@@ -31,5 +31,5 @@ void	*ft_memchr(const void *str, int c, size_t n)
 
 int		main(void)
 {
-	printf("%s", ft_memchr("asereje ja deje", 'j', 15));
+	printf("%p", ft_memchr("asereje ja deje", 'j', 15));
 }

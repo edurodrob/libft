@@ -39,10 +39,10 @@ int		main()
 	char	dst[50]="sobreescribir";
 	char	src[50]="bcdeafg";
 
-	printf("%s", ft_memccpy(dst, src, 'g', 7));
+	printf("%p", ft_memccpy(dst, src, 'g', 7));
 
 	char	dst2[50]="sobreescribir";
 	char	src2[50]="bcdeafg";
 
-	printf("\n%s", memccpy(dst2, src2, 'g', 7));
+	printf("\n%p", memccpy(dst2, src2, 'g', 7));
 }

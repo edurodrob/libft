@@ -13,27 +13,22 @@
 #include <stdio.h>
 #include <string.h>
 #include "libft.h"
-// FATAL CORREGIR ENTERA 
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < dstsize)
+	if (!dst || !src)
+		return (0);
+	while (src[i] && i < dstsize)
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
+	while (src[i])
+		i++;
 
-	return (dst);
-}
-
-int		main()
-{
-    char dst[]="asdasd";
-	char dst2[]="asdasd";
-
-    printf("%s\n", ft_strlcpy(dst, "0123456789", 6));
-    printf("%lu", strlcpy(dst2, "0123456789", 6));
+	return (i);
 }

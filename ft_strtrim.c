@@ -51,6 +51,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	newstr = (char *)malloc(sizeof(char) * (end - start + 1) + 1);
 	if (newstr == NULL)
 		return (NULL);
-	ft_strlcpy(newstr, (s1 + start), (end - start + 1));
+	ft_strncpy(newstr, (s1 + start), (end - start + 1));
 	return (newstr);
 }
