@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
@@ -23,7 +21,6 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	dest = (unsigned char *)dst;
 	source = (unsigned char *)src;
 	i = 0;
-
 	while (i < n)
 	{
 		dest[i] = source[i];
