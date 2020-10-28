@@ -10,23 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*dest;
-	char	*source;
+	char		*dest;
+	const char	*source;
 
 	dest = (char *)dst;
 	source = (char *)src;
-	if (dest > source)
+	if (dst > src)
 	{
 		while (len--)
 			dest[len] = source[len];
 	}
-	else if (dest < source)
-		memcpy(dst, src, len);
+	else if (dst < src)
+		ft_memcpy(dst, src, len);
 	return (dst);
 }

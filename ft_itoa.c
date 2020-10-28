@@ -43,8 +43,8 @@ char		*ft_itoa(int n)
 	str[len--] = '\0';
 	if (nbr == 0)
 	{
-		str[0] = 48;
-		return (str);
+		str = ft_calloc(2, sizeof(char));
+		str[0] = '0';
 	}
 	if (nbr < 0)
 	{

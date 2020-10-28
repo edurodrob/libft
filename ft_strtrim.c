@@ -48,9 +48,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = get_end(s1, set, len);
 	if (start >= end)
 		return (ft_strdup(""));
-	newstr = (char *)malloc(sizeof(char) * (end - start + 1) + 1);
-	if (newstr == NULL)
+	newstr = (char *)malloc(sizeof(char) * (end - start + 1));
+	if (!newstr)
 		return (NULL);
-	ft_strlcpy(newstr, (s1 + start), (end - start + 1));
+	ft_strlcpy(newstr, s1 + start, end - start + 1);
 	return (newstr);
 }
