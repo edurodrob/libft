@@ -10,14 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	unsigned int i;
-	unsigned int j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (to_find[i] == '\0')
