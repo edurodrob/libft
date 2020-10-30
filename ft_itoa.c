@@ -12,49 +12,44 @@
 
 #include "libft.h"
 
-static int	ft_get_len(long int n)
+ static int            ft_nblen(unsigned int n)
 {
-	int i;
+    unsigned int    i;
 
-	i = 0;
-	if (n < 0)
-	{
-		n = n * -1;
-		i++;
-	}
-	while (n > 0)
-	{
-		n = n / 10;
-		i++;
-	}
-	return (i);
+    i = 0;
+    while (n >= 10)
+    {
+        n /= 10;
+        i++;
+    }
+    return (i + 1);
 }
 
-char		*ft_itoa(int n)
+char                *ft_itoa(int n)
 {
-	char		*str;
-	int			len;
-	long int	nbr;
+    char            *dest;
+    unsigned int    len;
+    unsigned int    nb;
+    unsigned int    i;
 
-	nbr = n;
-	len = ft_get_len(nbr);
-	if (!(str = malloc(len * sizeof(char) + 1)))
-		return (0);
-	str[len--] = '\0';
-	if (nbr == 0)
-	{
-		str = ft_calloc(2, sizeof(char));
-		str[0] = '0';
-	}
-	if (nbr < 0)
-	{
-		str[0] = '-';
-		nbr = nbr * -1;
-	}
-	while (nbr > 0)
-	{
-		str[len--] = nbr % 10 + '0';
-		nbr = nbr / 10;
-	}
-	return (str);
+    nb = (n < 0 ? -n : n);
+    len = ft_nblen(nb);
+    i = 0;
+    if (!(dest = (char *)malloc(sizeof(char) * len + 1 + (n < 0 ? 1 : 0))))
+        return (NULL);
+    if (n < 0)
+    {
+        dest[i] = '-';
+        len++;
+    }
+    i = len - 1;
+    while (nb >= 10)
+    {
+        dest[i] = nb % 10 + 48;
+        nb /= 10;
+        i--;
+    }
+    dest[i] = nb % 10 + 48;
+    dest[len] = '\0';
+    return (dest);
 }
